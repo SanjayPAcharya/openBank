@@ -1,0 +1,44 @@
+.slide-one {
+    .backdrop {
+        overflow: hidden;
+        height: 100%;
+        &.left {
+            .circle {
+                height: 25rem;
+                position: relative;
+                top: 22vh;
+                left: -6vw;
+            }
+            .post {
+                height: 33vh;
+                width: auto;
+                position: relative;
+                left: 9vw;
+                top: -14vh;
+                z-index: 3;
+            }
+            .dots {
+                height: 7vh;
+                width: auto;
+                position: relative;
+                left: 24vw;
+                top: -18vh;
+                z-index: 2;
+            }
+        }
+        &.right {
+            .circle {
+                height: 52rem;
+                position: relative;
+                top: -22vh;
+                left: -1vw;
+            }
+            .dots {
+                height: 9vh;
+                position: relative;
+                top: -96vh;
+                left: 28vw;
+            }
+        }
+    }
+}
