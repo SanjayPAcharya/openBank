@@ -8,7 +8,7 @@ html {
         width: 100%;
         padding: 0px;
         margin: 0px;
-        font-family: Montserrat-Medium;
+        font-family: sans-serif;
         .main-wrap {
             height: 100%;
             width: 100%;
@@ -24,12 +24,12 @@ html {
 
             // slide one 
             .slide-one {
-                height: 100vh;
+                height: 50rem;
             }
 
             //slide two
             .slide-two {
-                height: 100vh;
+                height: 50rem;
             }
         }
 
@@ -60,6 +60,89 @@ html {
             }
             &:focus {
                 box-shadow: none;
+            }
+        }
+        
+        p-slider {
+            .p-slider {
+                &.p-slider-horizontal {
+                    &.p-component {
+                        .p-slider-handle {
+                            height: 0.8rem;
+                            width: 0.8rem;
+                            border: 2px solid #6f3e9f;
+                            top: 90%;
+                        }
+                        .p-slider-range {
+                            background: #6f3e9f;
+                        }
+                    }
+                }
+            }
+        }
+        p-dropdown {
+            .p-dropdown {
+                border: none !important;
+                border-bottom: 1px solid #dee2e6 !important;
+                border-radius: 0px;
+                &.p-focus {
+                    box-shadow: none !important;
+                    border-bottom: 1px solid #dee2e6 !important;
+                }
+                .p-dropdown-label {
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: #656565;
+                }
+            }
+        }
+        .switch {
+            display: inline-flex;
+            align-items: center;
+            line-height: 2;
+            label {
+                font-size: 12px;
+                font-weight: 600;
+                color: #8080809e;
+            }
+            p-inputswitch {
+                margin-left: 3rem;
+                .p-inputswitch {
+                    width: 2rem;
+                    height: 1rem;
+                    &.p-inputswitch-checked {
+                        .p-inputswitch-slider {
+                            background: #663399;
+                        }
+                        &:hover {
+                            .p-inputswitch-slider {
+                                background: #663399;
+                            }
+                        }
+                    }
+                    &.p-focus {
+                        .p-inputswitch-slider {
+                            box-shadow: none !important;
+                        }
+                    }
+                    .p-inputswitch-slider {
+                        &::before {
+                            width: 0.8rem;
+                            height: 0.8rem;
+                            left: 0.1rem;
+                            margin-top: -0.4rem;
+                        }
+                    }
+                }
+            }
+        }
+        .p-inputtext {
+            border: none;
+            border-bottom: 1px solid #dee2e6;
+            border-radius: 0px;
+            &:focus {
+                box-shadow: none !important;
+                border-bottom: 1px solid #dee2e6 !important;
             }
         }
     }

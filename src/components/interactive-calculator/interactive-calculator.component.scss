@@ -1,9 +1,41 @@
 .i-calculator {
-    height: 72vh;
-    width: 24vw;
-    background-color: #d2c7e3;
+    height: auto;
+    width: 21rem;
+    background-color: white;
     border-radius: 20px;
     position: relative;
-    top: -96vh;
-    left: 10vw;
+    top: -44rem;
+    left: 16rem;
+    z-index: 3;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 2px 1px -1px rgb(0 0 0 / 12%);
+    .card {
+        padding: 20px;
+        .hdr {
+            text-align: center;
+            height: 3rem;
+            label {
+                font-weight: 600;
+                color: darkslategray;
+            }
+        }
+        .p-fluid {
+            .p-field {
+                .vals {
+                    display: grid;
+                    line-height: 1.6;
+                    padding: 10px 0px;
+                    label {
+                        font-size: 12px;
+                        font-weight: 600;
+                        color: #8080809e;
+                    }
+                    span {
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: #656565;
+                    }
+                }
+            }
+        }
+    }
 }

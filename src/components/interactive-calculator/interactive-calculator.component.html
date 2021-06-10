@@ -1,34 +1,49 @@
 <div class="i-calculator">
     <div class="card">
-        <label>Eligibility Calculator</label>
+        <div class="hdr">
+            <label>Eligibility Calculator</label>
+        </div>
         <div class="p-fluid p-formgrid p-grid">
             <div class="p-field p-col-12 p-md-12">
-                <label>Firstname</label>
+                <div class="vals">
+                    <label>Monthly Income</label>
+                    <span>&#x20b9; {{val1 * 1500}}</span>
+                </div>
                 <p-slider [(ngModel)]="val1"></p-slider>
+                <div class="range">
+
+                </div>
             </div>
             <div class="p-field p-col-12 p-md-12">
-                <label>Firstname</label>
-                <p-slider [(ngModel)]="val1"></p-slider>
+                <div class="vals">
+                    <label>Monthly Expense</label>
+                    <span>&#x20b9; {{val2  * 1500}}</span>
+                </div>
+                <p-slider [(ngModel)]="val2"></p-slider>
             </div>
             <div class="p-field p-col-12 p-md-12">
-                <label>Firstname</label>
-                <p-slider [(ngModel)]="val1"></p-slider>
-            </div>
-            <div class="p-field p-col-12 p-md-12">
-                <label for="state">State</label>
+                <div class="vals">
+                    <label>Repayment Tenure</label>
+                </div>
                 <p-dropdown
                   inputId="state"
-                  [options]="states"
-                  [(ngModel)]="selectedState"
+                  [options]="duration"
+                  [(ngModel)]="selectedDuration"
                   placeholder="Select"
                   optionLabel="name"
+                  name="name"
                 ></p-dropdown>
             </div>
             <div class="p-field p-col-12 p-md-12">
-                <p-inputSwitch [(ngModel)]="checked2"></p-inputSwitch>
+                <div class="switch">
+                    <label>Do you have any Existing Loans?</label>
+                    <p-inputSwitch [(ngModel)]="checked2"></p-inputSwitch>
+                </div>
             </div>
             <div class="p-field p-col-12 p-md-12">
-                <label for="state">Salary</label>
+                <div class="vals">
+                    <label>EMI of Existing loan (optional)</label>
+                </div>
                 <input type="text" pInputText [(ngModel)]="property"/>
             </div>
         </div>
