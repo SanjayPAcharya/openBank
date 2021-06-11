@@ -9,6 +9,7 @@ import { PrimeNGConfig } from 'primeng/api';
 export class AppComponent {
 
   title = 'openBank';
+  _isScrolled: boolean = false;
 
   @ViewChild('slideOne', {static: true}) slideOne: any;
   @ViewChild('slideTwo', {static: false}) slideTwo: any;
@@ -17,6 +18,10 @@ export class AppComponent {
 
   ngOnInit() {
     this.primengConfig.ripple = true;
+  }  
+  
+  onScroll(e: any) {
+    this._isScrolled = e.target.scrollTop >= 50;
   }
 
   navigateToSlide(toWhere: any) {

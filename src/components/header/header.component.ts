@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, HostListener, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,12 +6,13 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  
+  @Input() isScrolled = false;
   @Output('_navigateTo') naviagetTo = new EventEmitter<string>();
+  
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {  }
 
   scrollToElement(element: any): void {
     this.naviagetTo.emit(element);

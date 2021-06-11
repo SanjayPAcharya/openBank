@@ -1,5 +1,5 @@
-<div class="main-wrap">
-  <app-header (_navigateTo)="navigateToSlide($event)"></app-header>
+<div class="main-wrap" (scroll)="onScroll($event)">
+  <app-header (_navigateTo)="navigateToSlide($event)" [isScrolled]="_isScrolled"></app-header>
   <div #slideOne>
     <app-slide-one></app-slide-one>
   </div>

@@ -11,18 +11,17 @@ export class InteractiveCalculatorComponent implements OnInit {
   val2: any;
   rangeValues: any;
 
-
-  selectedDuration: any = '6m';
+  selectedDuration: any = {name: "3 Months", code: 3};
 
   duration: any[] = [
-      {name: '1 Month', code: '1m'},
-      {name: '3 Months', code: '3m'},
-      {name: '6 Months', code: '6m'},
-      {name: '12 Months', code: '12m'},
-      {name: '48 Months', code: '48m'}
+      {name: '1 Month', code: 1},
+      {name: '3 Months', code: 3},
+      {name: '6 Months', code: 6},
+      {name: '12 Months', code: 12},
+      {name: '48 Months', code: 48}
   ];
 
-  property: any;
+  eLoan: any;
 
   checked2: any;
 
@@ -33,6 +32,9 @@ export class InteractiveCalculatorComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // setInterval( ()=>{
+    //   console.log(this.selectedDuration)
+    // }, 1000)
   }
 
 }

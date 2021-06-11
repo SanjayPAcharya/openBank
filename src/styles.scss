@@ -8,7 +8,7 @@ html {
         width: 100%;
         padding: 0px;
         margin: 0px;
-        font-family: sans-serif;
+        font-family: 'Montserrat', sans-serif;
         .main-wrap {
             height: 100%;
             width: 100%;
@@ -140,6 +140,9 @@ html {
             border: none;
             border-bottom: 1px solid #dee2e6;
             border-radius: 0px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #656565;
             &:focus {
                 box-shadow: none !important;
                 border-bottom: 1px solid #dee2e6 !important;

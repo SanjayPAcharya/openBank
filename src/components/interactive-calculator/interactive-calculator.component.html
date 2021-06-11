@@ -7,17 +7,18 @@
             <div class="p-field p-col-12 p-md-12">
                 <div class="vals">
                     <label>Monthly Income</label>
-                    <span>&#x20b9; {{val1 * 1500}}</span>
+                    <span>&#x20b9; {{val1 * 1500 | number}}</span>
                 </div>
                 <p-slider [(ngModel)]="val1"></p-slider>
-                <div class="range">
-
+                <div class="p-d-flex p-jc-between range">
+                    <span>&#x20b9;  {{ 0 | number }}</span>
+                    <span>&#x20b9;  {{ 150000 | number }}</span>
                 </div>
             </div>
             <div class="p-field p-col-12 p-md-12">
                 <div class="vals">
                     <label>Monthly Expense</label>
-                    <span>&#x20b9; {{val2  * 1500}}</span>
+                    <span>&#x20b9; {{val2  * 1500 | number}}</span>
                 </div>
                 <p-slider [(ngModel)]="val2"></p-slider>
             </div>
@@ -44,8 +45,21 @@
                 <div class="vals">
                     <label>EMI of Existing loan (optional)</label>
                 </div>
-                <input type="text" pInputText [(ngModel)]="property"/>
+                <p-inputNumber placeholder="&#x20b9; 00.00" [(ngModel)]="eLoan" mode="currency" currency="INR" locale="en-IN" [minFractionDigits]="2"></p-inputNumber>
             </div>
+        </div>
+    </div>
+    <div class="calculator-action">
+        <div class="vals">
+            <label>Loan Amount</label>
+            <span><span>&#x20b9;</span> {{((val1 - val2) * 1500) * 0.6 | number }}</span>
+        </div>
+        <div class="vals">
+            <label>Your EMI will be</label>
+            <span>&#x20b9; {{ (((val1 - val2) * 1500) * 0.6 ) / selectedDuration.code | number }}</span>
+        </div>
+        <div class="action">
+            <button pButton type="button" label="Get Money" class="p-button-raised p-button-rounded"></button>
         </div>
     </div>
 </div>
