@@ -11,7 +11,7 @@
                 </div>
                 <p-slider [(ngModel)]="salary" (onChange)="baseChange($event)" [step]="10" [min]="10000" [max]="150000"></p-slider>
                 <div class="p-d-flex p-jc-between range">
-                    <span>&#x20b9;  {{ 0 | number }}</span>
+                    <span>&#x20b9;  {{ 10000 | number }}</span>
                     <span>&#x20b9;  {{ 150000 | number }}</span>
                 </div>
             </div>
