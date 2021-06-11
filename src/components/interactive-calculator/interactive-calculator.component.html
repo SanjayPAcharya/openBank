@@ -7,9 +7,9 @@
             <div class="p-field p-col-12 p-md-12">
                 <div class="vals">
                     <label>Monthly Income</label>
-                    <span>&#x20b9; {{val1 * 1500 | number}}</span>
+                    <span>&#x20b9; {{ salary | number }}</span>
                 </div>
-                <p-slider [(ngModel)]="val1"></p-slider>
+                <p-slider [(ngModel)]="salary" (onChange)="baseChange($event)" [step]="10" [min]="10000" [max]="150000"></p-slider>
                 <div class="p-d-flex p-jc-between range">
                     <span>&#x20b9;  {{ 0 | number }}</span>
                     <span>&#x20b9;  {{ 150000 | number }}</span>
@@ -18,9 +18,13 @@
             <div class="p-field p-col-12 p-md-12">
                 <div class="vals">
                     <label>Monthly Expense</label>
-                    <span>&#x20b9; {{val2  * 1500 | number}}</span>
+                    <span>&#x20b9; {{ expense | number}}</span>
                 </div>
-                <p-slider [(ngModel)]="val2"></p-slider>
+                <p-slider [(ngModel)]="expense" [max]="salary" [step]="10"></p-slider>
+                <div class="p-d-flex p-jc-between range">
+                    <span>&#x20b9;  {{ 0 | number }}</span>
+                    <span>&#x20b9;  {{ salary | number }}</span>
+                </div>
             </div>
             <div class="p-field p-col-12 p-md-12">
                 <div class="vals">
@@ -52,14 +56,15 @@
     <div class="calculator-action">
         <div class="vals">
             <label>Loan Amount</label>
-            <span><span>&#x20b9;</span> {{((val1 - val2) * 1500) * 0.6 | number }}</span>
+            <span><span>&#x20b9;</span> {{(salary - expense) | number }}</span>
         </div>
         <div class="vals">
             <label>Your EMI will be</label>
-            <span>&#x20b9; {{ (((val1 - val2) * 1500) * 0.6 ) / selectedDuration.code | number }}</span>
+            <!-- Formula ( (salary - expense) / EMImonths )-->
+            <span>&#x20b9; {{ (salary - expense) / selectedDuration.code | number:'1.0-0' }}</span>
         </div>
         <div class="action">
-            <button pButton type="button" label="Get Money" class="p-button-raised p-button-rounded"></button>
+            <button pButton type="button" label="Get Money" class="p-button-raised p-button-rounded hoverEnabled"></button>
         </div>
     </div>
 </div>

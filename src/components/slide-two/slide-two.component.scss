@@ -2,6 +2,9 @@
     .slide-two {
         .p-grid {
             margin: 0px;
+            div {
+                margin: 0px;
+            }
         }
         .slides {
             &.second {

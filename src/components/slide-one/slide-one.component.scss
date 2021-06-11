@@ -1,5 +1,12 @@
 .slide-one {
     margin: 0px;
+    &.p-grid {
+        margin: 0px;
+        div {
+            margin: 0px;
+            padding: 0px;
+        }
+    }
     .backdrop {
         overflow: hidden;
         height: 100%;

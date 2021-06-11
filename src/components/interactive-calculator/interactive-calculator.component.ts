@@ -7,9 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InteractiveCalculatorComponent implements OnInit {
 
-  val1: any;
-  val2: any;
-  rangeValues: any;
+  salary: any;
+  expense: any;
 
   selectedDuration: any = {name: "3 Months", code: 3};
 
@@ -26,15 +25,17 @@ export class InteractiveCalculatorComponent implements OnInit {
   checked2: any;
 
   constructor() {
-    this.val1 = 45;
-    this.val2 = 12;
-    this.rangeValues = [0,this.val1]
+    this.salary = 15000;
+    this.expense = 5000;
   }
 
-  ngOnInit(): void {
-    // setInterval( ()=>{
-    //   console.log(this.selectedDuration)
-    // }, 1000)
+  ngOnInit(): void { }
+
+  // expense will reset to 0 if salary becomes less than expense
+  baseChange(e: any) {
+    if (e.value < this.expense) {
+      this.expense = 0;
+    }
   }
 
 }

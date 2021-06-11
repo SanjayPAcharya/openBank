@@ -35,13 +35,39 @@ html {
 
         //general components
         .p-button {
+            &.p-button-text {
+                &:hover {
+                    .p-button-label {
+                        color: #653398;
+                    }
+                }
+            }
+            &.p-button-rounded {
+                &.solid {
+                    background: transparent linear-gradient(90deg, #9F62C9 0%, #663399 100%) 0% 0% no-repeat padding-box;
+                    border: solid 2px #653398;
+                    .p-button-label {
+                        color: white;
+                    }
+                }
+                &.hoverEnabled {
+                    &:hover {
+                        background: transparent linear-gradient(90deg, #653398 0%, #663399 100%) 0% 0% no-repeat padding-box;
+                        border: solid 2px #653398;
+                        .p-button-label {
+                            color: white;
+                        }
+                    }
+                }
+            }
             .p-button-label {
                 color: #222222;
                 font-size: 14px;
                 font-weight: 600;
             }
             &.p-button-rounded {
-                height: 24px;
+                padding: 0px 30px;
+                height: 40px;
                 font-weight: 600;
                 border: solid 2px #663399;
                 background-color: white;
@@ -51,11 +77,8 @@ html {
                     font-size: 12px;
                 }
                 &:hover {
-                    background: transparent linear-gradient(90deg, #9F62C9 0%, #663399 100%) 0% 0% no-repeat padding-box;
+                    background: #ffffff;
                     border: solid 2px #9F62C9;
-                    .p-button-label {
-                        color: white;
-                    }
                 }
             }
             &:focus {
